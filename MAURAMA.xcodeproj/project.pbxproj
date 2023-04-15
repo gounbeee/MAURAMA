@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5859760A299658BA009B12E4 /* MathListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58597609299658BA009B12E4 /* MathListController.swift */; };
+		5859760C29967140009B12E4 /* MathContentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859760B29967140009B12E4 /* MathContentVM.swift */; };
+		5859760E29974594009B12E4 /* MathContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859760D29974594009B12E4 /* MathContentController.swift */; };
+		585976102997D9B3009B12E4 /* MainIntroVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859760F2997D9B3009B12E4 /* MainIntroVM.swift */; };
+		586ED4BD29963277002CACA5 /* MathListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586ED4BC29963277002CACA5 /* MathListVM.swift */; };
+		589B92EA297991E7006CB2DD /* MAURAMAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589B92E9297991E7006CB2DD /* MAURAMAApp.swift */; };
+		589B92EE297991EA006CB2DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589B92ED297991EA006CB2DD /* Assets.xcassets */; };
+		589B92F1297991EA006CB2DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589B92F0297991EA006CB2DD /* Preview Assets.xcassets */; };
+		589B930C297994FD006CB2DD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589B930B297994FD006CB2DD /* MainView.swift */; };
+		589B930F29799525006CB2DD /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 589B930E29799525006CB2DD /* VideoPlayer */; };
+		58B8821F2994BD210005DBA0 /* BluetoothConnectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B8821E2994BD210005DBA0 /* BluetoothConnectionVM.swift */; };
+		58B9777A298817240010E642 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B97779298817240010E642 /* BluetoothController.swift */; };
+		58BC7252297EBA2D0024B6DD /* MovieDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC7251297EBA2D0024B6DD /* MovieDataView.swift */; };
+		58BC7255297EBB480024B6DD /* TriangleRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC7254297EBB480024B6DD /* TriangleRight.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		58597609299658BA009B12E4 /* MathListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathListController.swift; sourceTree = "<group>"; };
+		5859760B29967140009B12E4 /* MathContentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathContentVM.swift; sourceTree = "<group>"; };
+		5859760D29974594009B12E4 /* MathContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathContentController.swift; sourceTree = "<group>"; };
+		5859760F2997D9B3009B12E4 /* MainIntroVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIntroVM.swift; sourceTree = "<group>"; };
+		586ED4BC29963277002CACA5 /* MathListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathListVM.swift; sourceTree = "<group>"; };
+		589B92E6297991E7006CB2DD /* MAURAMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAURAMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		589B92E9297991E7006CB2DD /* MAURAMAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAURAMAApp.swift; sourceTree = "<group>"; };
+		589B92ED297991EA006CB2DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		589B92F0297991EA006CB2DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		589B930B297994FD006CB2DD /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		589B931029799565006CB2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58B8821E2994BD210005DBA0 /* BluetoothConnectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConnectionVM.swift; sourceTree = "<group>"; };
+		58B97779298817240010E642 /* BluetoothController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
+		58BC7251297EBA2D0024B6DD /* MovieDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataView.swift; sourceTree = "<group>"; };
+		58BC7254297EBB480024B6DD /* TriangleRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleRight.swift; sourceTree = "<group>"; };
+		58BE2D3F2980FBE500C5F872 /* MAURAMA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MAURAMA.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		589B92E3297991E7006CB2DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589B930F29799525006CB2DD /* VideoPlayer in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		589B92DD297991E7006CB2DD = {
+			isa = PBXGroup;
+			children = (
+				589B92E8297991E7006CB2DD /* MAURAMA */,
+				589B92E7297991E7006CB2DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		589B92E7297991E7006CB2DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				589B92E6297991E7006CB2DD /* MAURAMA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		589B92E8297991E7006CB2DD /* MAURAMA */ = {
+			isa = PBXGroup;
+			children = (
+				58BE2D3F2980FBE500C5F872 /* MAURAMA.entitlements */,
+				58BC7253297EBB230024B6DD /* CustomIcon */,
+				589B931029799565006CB2DD /* Info.plist */,
+				589B92E9297991E7006CB2DD /* MAURAMAApp.swift */,
+				589B930B297994FD006CB2DD /* MainView.swift */,
+				589B92ED297991EA006CB2DD /* Assets.xcassets */,
+				589B92EF297991EA006CB2DD /* Preview Content */,
+				58BC7251297EBA2D0024B6DD /* MovieDataView.swift */,
+				58B97779298817240010E642 /* BluetoothController.swift */,
+				58B8821E2994BD210005DBA0 /* BluetoothConnectionVM.swift */,
+				586ED4BC29963277002CACA5 /* MathListVM.swift */,
+				58597609299658BA009B12E4 /* MathListController.swift */,
+				5859760B29967140009B12E4 /* MathContentVM.swift */,
+				5859760D29974594009B12E4 /* MathContentController.swift */,
+				5859760F2997D9B3009B12E4 /* MainIntroVM.swift */,
+			);
+			path = MAURAMA;
+			sourceTree = "<group>";
+		};
+		589B92EF297991EA006CB2DD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				589B92F0297991EA006CB2DD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		58BC7253297EBB230024B6DD /* CustomIcon */ = {
+			isa = PBXGroup;
+			children = (
+				58BC7254297EBB480024B6DD /* TriangleRight.swift */,
+			);
+			path = CustomIcon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		589B92E5297991E7006CB2DD /* MAURAMA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 589B92F4297991EA006CB2DD /* Build configuration list for PBXNativeTarget "MAURAMA" */;
+			buildPhases = (
+				589B92E2297991E7006CB2DD /* Sources */,
+				589B92E3297991E7006CB2DD /* Frameworks */,
+				589B92E4297991E7006CB2DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MAURAMA;
+			packageProductDependencies = (
+				589B930E29799525006CB2DD /* VideoPlayer */,
+			);
+			productName = MAURAMA;
+			productReference = 589B92E6297991E7006CB2DD /* MAURAMA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		589B92DE297991E7006CB2DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					589B92E5297991E7006CB2DD = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 589B92E1297991E7006CB2DD /* Build configuration list for PBXProject "MAURAMA" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 589B92DD297991E7006CB2DD;
+			packageReferences = (
+				589B930D29799525006CB2DD /* XCRemoteSwiftPackageReference "VideoPlayer" */,
+			);
+			productRefGroup = 589B92E7297991E7006CB2DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				589B92E5297991E7006CB2DD /* MAURAMA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		589B92E4297991E7006CB2DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589B92F1297991EA006CB2DD /* Preview Assets.xcassets in Resources */,
+				589B92EE297991EA006CB2DD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		589B92E2297991E7006CB2DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589B92EA297991E7006CB2DD /* MAURAMAApp.swift in Sources */,
+				586ED4BD29963277002CACA5 /* MathListVM.swift in Sources */,
+				585976102997D9B3009B12E4 /* MainIntroVM.swift in Sources */,
+				58BC7252297EBA2D0024B6DD /* MovieDataView.swift in Sources */,
+				58B9777A298817240010E642 /* BluetoothController.swift in Sources */,
+				58BC7255297EBB480024B6DD /* TriangleRight.swift in Sources */,
+				5859760E29974594009B12E4 /* MathContentController.swift in Sources */,
+				5859760A299658BA009B12E4 /* MathListController.swift in Sources */,
+				58B8821F2994BD210005DBA0 /* BluetoothConnectionVM.swift in Sources */,
+				589B930C297994FD006CB2DD /* MainView.swift in Sources */,
+				5859760C29967140009B12E4 /* MathContentVM.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		589B92F2297991EA006CB2DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		589B92F3297991EA006CB2DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		589B92F5297991EA006CB2DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = MAURAMA/MAURAMA.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MAURAMA/Preview Content\"";
+				DEVELOPMENT_TEAM = TU6ZYUS3Y7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MAURAMA/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Supporting Bluetooth.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Supporting Bluetooth.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sy-app-2023.MAURAMA";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		589B92F6297991EA006CB2DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = MAURAMA/MAURAMA.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MAURAMA/Preview Content\"";
+				DEVELOPMENT_TEAM = TU6ZYUS3Y7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MAURAMA/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Supporting Bluetooth.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Supporting Bluetooth.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sy-app-2023.MAURAMA";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		589B92E1297991E7006CB2DD /* Build configuration list for PBXProject "MAURAMA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				589B92F2297991EA006CB2DD /* Debug */,
+				589B92F3297991EA006CB2DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		589B92F4297991EA006CB2DD /* Build configuration list for PBXNativeTarget "MAURAMA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				589B92F5297991EA006CB2DD /* Debug */,
+				589B92F6297991EA006CB2DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		589B930D29799525006CB2DD /* XCRemoteSwiftPackageReference "VideoPlayer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wxxsw/VideoPlayer.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.1.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		589B930E29799525006CB2DD /* VideoPlayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 589B930D29799525006CB2DD /* XCRemoteSwiftPackageReference "VideoPlayer" */;
+			productName = VideoPlayer;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 589B92DE297991E7006CB2DD /* Project object */;
+}
