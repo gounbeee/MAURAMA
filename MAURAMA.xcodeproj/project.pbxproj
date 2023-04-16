@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5804640229EBBEC000AAC681 /* MEMO_AUDIO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5804640129EBBEC000AAC681 /* MEMO_AUDIO.txt */; };
 		5859760A299658BA009B12E4 /* MathListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58597609299658BA009B12E4 /* MathListController.swift */; };
 		5859760C29967140009B12E4 /* MathContentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859760B29967140009B12E4 /* MathContentVM.swift */; };
 		5859760E29974594009B12E4 /* MathContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859760D29974594009B12E4 /* MathContentController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5804640129EBBEC000AAC681 /* MEMO_AUDIO.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MEMO_AUDIO.txt; sourceTree = "<group>"; };
 		58597609299658BA009B12E4 /* MathListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathListController.swift; sourceTree = "<group>"; };
 		5859760B29967140009B12E4 /* MathContentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathContentVM.swift; sourceTree = "<group>"; };
 		5859760D29974594009B12E4 /* MathContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathContentController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				5859760B29967140009B12E4 /* MathContentVM.swift */,
 				5859760D29974594009B12E4 /* MathContentController.swift */,
 				5859760F2997D9B3009B12E4 /* MainIntroVM.swift */,
+				5804640129EBBEC000AAC681 /* MEMO_AUDIO.txt */,
 			);
 			path = MAURAMA;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5804640229EBBEC000AAC681 /* MEMO_AUDIO.txt in Resources */,
 				589B92F1297991EA006CB2DD /* Preview Assets.xcassets in Resources */,
 				589B92EE297991EA006CB2DD /* Assets.xcassets in Resources */,
 			);

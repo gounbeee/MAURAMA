@@ -1,0 +1,124 @@
+IOS
+
+
+APPLEのAUDIO関連機能
+https://developer.apple.com/documentation/avfaudio
+
+
+┌────────────┐
+│  AVFAudio  │
+└────────────┘
+おそらく、Audio Visual Framework Audioからの名称。
+
+この下に、
+
+システムAUDIO
+・AVAudioSession　　　　　　：　アプリの中で、どのようにAudioを使用するかを決める
+・AVAudioRoutingArbiter　 ：　AirPodsの自動Switchingにアプリが参加できるように設定する。
+
+基本的な再生、レコーディング
+・AVAudioPlayer           ：　FILEかBUFFERから音を再生する
+・AVAudioRecorder　　　　　 ：　音を録音してファイルにする
+・AVMIDIPlayer　　　　　　　 ：　MIDIデータを再生させるモジュール
+
+詳細AUDIO処理
+・Audio Engine　　　　　　　 ：　リアルタイム、またはオフラインでの音の処理を行い、3D空間化、サンプリングとMIDI処理を行う。
+たちがある。
+
+
+
+
+
+┌────────────────────────────────────────┐
+│                                        │
+│            AUDIO SESSIONを使う          │
+│                                        │
+└────────────────────────────────────────┘
+https://developer.apple.com/library/archive/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/ConfiguringanAudioSession/ConfiguringanAudioSession.html#//apple_ref/doc/uid/TP40007875-CH2-SW1
+
+１
+AUDIOを使用するためには、SESSIONを要請（REQUEST）することで可能になる。
+ここで、リクエストを要求する側は、ユーザが使用するアプリケーションたちだ。
+また、そのリクエストを処理し、司令塔の役割をするのは、Core Audioである。
+
+２　状態（STATE）の管理
+アプリが、PLAYボタン、STOPボタンを持っていて、PLAYボタンで音を再生するのなら、PLAYボタンで、音を再生するリクエストを要求し、音が再生されると言う流れになる。
+つまり、SESSIONが活性化し、音が再生されるとき、「再生中」と言う状態がSESSIONに発生する。
+
+３　複数のSESSIONが競合する状態
+アプリは複数立ち上がり、各々音を発生しようとする。
+そうなると、あるSESSIONの再生中、他の音再生は無視されることがあるだろう。
+
+４　基本的なSESSIONの稼働
+                                                                                                           
+let session = AVAudioSession.sharedInstance()
+
+do {
+    // 1) Configure your audio session category, options, and mode
+    ここで、SESSIONのカテゴリ、オプション、モード等を決める
+    
+    // 2) Activate your audio session to enable your custom configuration
+    AUIDO　SESSIONを稼働する。
+    
+    try session.setActive(true)
+    **　ここでfalseを送ると、SESSIONをオフにできる。
+    
+} catch let error as NSError {
+
+    print("Unable to activate audio session:  \(error.localizedDescription)")
+    
+}
+
+
+
+
+
+
+
+┌──────────────────────────────────────┐
+│                                      │
+│   Building a Synthesizer in Swift    │
+│                                      │
+└──────────────────────────────────────┘
+
+https://betterprogramming.pub/building-a-synthesizer-in-swift-866cd15b731
+
+
+< AVAudioEngine を使用し音のWAVEを生成する >
+
+2019年にアップデートされた機能で、AVAudioNodes　の二つがある。
+AVAudioSinkNode と AVAudioSourceNodeだ。
+
+APPLEは、この二つのノードを、「AVAudioEngineから音の送受信をアプリができるようにする」機能だと紹介した。
+この機能を使って、AUDIOデータをAUDIO信号プロセッシングネットワークのOUTPUTに送ることができる。
+
+まず、AudioSourceNodeは、４つのパラメータを受け付ける、Trailingクロージャを提供する。
+その中で２つの引数で音を再生することができる。
+
+一つ目：AVAudioFrameCount型のデータ
+二つ目：UnsafeMutablePointer型のデータ、音データBUFFERへのポインタ
+
+また、このクロージャの戻り値は、OSStatus型のデータだ。
+
+
+
+AVAudioSourceNode型のデータは、リアルタイムで、手動レンダリングモードのために使用できる。
+この状態を利用して、音データをFILEかリアルタイムでの使用ができる。
+
+ここで、APPLEは、AVAudioSourceNodeデータを利用するときは、必ずリアルタイムを準拠することが望まれると強調した。
+つまり、この機能を使用しているTHREADの中で、どのようなオブジェクトも初期化されてはならず、また、メモリー割り当てをしてもいけない。
+もしそれを行うと、音の処理において遅延が生じてしまう。それはまた、BUFFERに対し、アンダーまたはオーバフローを起こす。
+そうなると、クリック音かポップ音を引き起こすことになるのである。
+これは、音のみならず、スピーカーをも傷つけることになる可能性がある。
+
+
+
+
+
+
+
+
+
+
+
+

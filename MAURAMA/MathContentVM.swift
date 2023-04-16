@@ -21,20 +21,20 @@ struct FloatingButton: View {
             HStack {
                 
                 Button(action: {
-                    ///print("Tapped!!")
-                    flag.toggle()
-                    
-                }, label: {
-                    Image(systemName: "arrowshape.turn.up.left.fill")
-                        .foregroundColor(.white)
-                        .font(.system(size: 30))
-                        .padding(EdgeInsets(top: -4, leading: 0, bottom: 0, trailing: 0))
-                    
-                })
-                .frame(width: 45, height: 45)
-                .background(Color.gray.opacity(0.5))
-                .cornerRadius(30.0)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 16.0, trailing: 16.0))
+                        ///print("Tapped!!")
+                        flag.toggle()
+                        
+                    }, label: {
+                        Image(systemName: "arrowshape.turn.up.left.fill")
+                            .foregroundColor(.white)
+                            .font(.system(size: 30))
+                            .padding(EdgeInsets(top: -4, leading: 0, bottom: 0, trailing: 0))
+                        
+                    })
+                    .frame(width: 45, height: 45)
+                    .background(Color.gray.opacity(0.5))
+                    .cornerRadius(30.0)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 16.0, trailing: 16.0))
 
             }
         }
@@ -43,57 +43,12 @@ struct FloatingButton: View {
 
 
 
-
-struct DisplayScrollView: View {
-        
-    @Binding var imgUrls : [String]
-    @Binding var isEntered : Bool
-    
-    
-    var body: some View {
-        
-        ZStack (alignment: .top ){
-            
-            ScrollView (.vertical , showsIndicators: true) {
-                Spacer().frame(height: 50)
-                
-                VStack (spacing: 0) {
-                    
-                    ForEach(self.imgUrls, id: \.self) { url in
-                        
-                        Spacer().frame(height: 50)
-                        
-                        AsyncImage(url: URL(string: url)) { image in
-                            image.resizable()
-                                .scaledToFit()
-                                .aspectRatio(contentMode: .fit)
-                                .padding()
-                            
-                            
-                        } placeholder: {
-                            ProgressView()
-                        }
-                        
-                    }
-                     
-                }
-                
-            }.background(Color.black)
-            
-            FloatingButton(flag: self.$isEntered)
-                .padding(EdgeInsets(top: 20, leading: -160, bottom: 0, trailing: 0))
-            
-            
-        } // ZStack
-    }
-}
-
-
 /// < PAGE VIEW >
 /// https://www.youtube.com/watch?v=zzqKhitBQfM
 struct DisplayPageView: View {
     
-    @Binding var imgUrls : [String]
+    @Binding var subNum : Int
+    // @Binding var imgUrls : [String]
     @Binding var isEntered : Bool
 
     
@@ -101,32 +56,49 @@ struct DisplayPageView: View {
         
         ZStack (alignment: .top) {
             
-            VStack {
-                            
-                TabView {
-                
-                    ForEach(self.imgUrls, id: \.self) { url in
-                        
-                        
-                        AsyncImage(url: URL(string: url)) { image in
-                            image.resizable()
-                                .scaledToFit()
-                                .cornerRadius(15.0)
-                                .aspectRatio(contentMode: .fit)
-                                .padding()
-                                
-                            
-                            
-                        } placeholder: {
-                            ProgressView()
-                        }
-                    }
-                }
-                .tabViewStyle(.page)
-                .indexViewStyle(.page(backgroundDisplayMode: .never))
+            
+            
+            
+// -----------------------------------
+// この部分は、イメージファイルを複数見せるバージョン
+//
+//            VStack {
+//
+//                TabView {
+//
+//                    ForEach(self.imgUrls, id: \.self) { url in
+//
+//
+//                        AsyncImage(url: URL(string: url)) { image in
+//                            image.resizable()
+//                                .scaledToFit()
+//                                .cornerRadius(15.0)
+//                                .aspectRatio(contentMode: .fit)
+//                                .padding()
+//
+//
+//
+//                        } placeholder: {
+//
+//                            ProgressView()
+//
+//                        }
+//                    }
+//                }
+//                .tabViewStyle(.page)
+//                .indexViewStyle(.page(backgroundDisplayMode: .never))
+//
+//            }     // VStack
 
-            }     // VStack
-
+            
+            let _ = print(self.subNum)
+            
+            
+            // ムービ教材を再生
+            MovieDataView( subNum: self.$subNum )
+            
+            
+            // 戻るボタン
             FloatingButton(flag: self.$isEntered)
                 .padding(EdgeInsets(top: 20, leading: -160, bottom: 0, trailing: 0))
             
@@ -140,8 +112,8 @@ struct DisplayPageView: View {
 
 struct MathContentVM: View {
     
-
-    @Binding var imgUrls : [String]
+    @Binding var subNum : Int
+    // @Binding var imgUrls : [String]
     @Binding var isEntered : Bool
 
  
@@ -152,8 +124,17 @@ struct MathContentVM: View {
             /// TODO :: EXPAND NEW STYLE OF DISPLAYING CONTENTS !!!!
             ///  CURRENTLY WE ARE HAVING VERTICAL SLIDE AND PAGE VIEW
            
-            //DisplayScrollView(imgUrls: $imgUrls, isEntered: $isEntered)
-            DisplayPageView(imgUrls: $imgUrls, isEntered: $isEntered)
+            //NOT USING -- DisplayScrollView(imgUrls: $imgUrls, isEntered: $isEntered)
+            
+            //DisplayPageView(subNum: $subNum, imgUrls: $imgUrls, isEntered: $isEntered)
+            DisplayPageView(subNum: $subNum, isEntered: $isEntered)
+            
+            
+            
+            
+            
+            
+            
             
         }
 
@@ -166,7 +147,8 @@ struct MathContentVM: View {
 
 struct MathContentVM_Previews: PreviewProvider {
 
-
+    @State static var subjectNumber = 2
+    
     @State static var imgUrlsTest : [String] = [ "https://siyoung.work/COARAMAUSE_CONTENTS/pg/pg00006.png",
                                "https://siyoung.work/COARAMAUSE_CONTENTS/pg/pg00007.png",
                                "https://siyoung.work/COARAMAUSE_CONTENTS/pg/pg00008.png",
@@ -178,7 +160,7 @@ struct MathContentVM_Previews: PreviewProvider {
     ///
     static var previews: some View {
 
-        MathContentVM(imgUrls: $imgUrlsTest, isEntered: $isEntered)
+        MathContentVM(subNum: $subjectNumber,  isEntered: $isEntered)
 
     }
 }

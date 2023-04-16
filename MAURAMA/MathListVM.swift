@@ -139,6 +139,9 @@ struct MathListVM: View {
     @State private var current: [Int] = []
     
     
+    @State var subjectNumber : Int = -1
+    
+    
     init(bluetoothCtr bleCtr : BluetoothController) {
         
         self.bluetoothCtr = bleCtr
@@ -151,6 +154,9 @@ struct MathListVM: View {
         /// GETTING CSV FILE FROM SERVER
         self.mathListController.preparePageCSVFromServer(csvUrl: g_csvPageUrl)
         self.mathListController.prepareTitleCSVFromServer(csvUrl: g_csvTitleUrl)
+        
+        
+        
         
 
         print("MathListVM IS INITIALIZED")
@@ -234,14 +240,16 @@ struct MathListVM: View {
                             
                             ForEach(self.mathListController.csvTitleDictionary.sorted(by: <), id: \.key) { index, value in
                                 
+                                // 教材タイトルのボタンが押されたとき
                                 Button(action: {
                                     
-                                    // STORE CURRENT POSITION
+                                    // 現在の教材リストの番号を覚えさせ、次にリストを表示するとき最初から移動させる
                                     stored = current.sorted()[0]
                                     print("!! stored \(stored)")
-                                    
+                                                                       
                                     
                                     print( "PRESSED SUBJECTS'S INDEX IS  -->   \(index + 1)" )
+                                    
                                     
                                     
                                     print( "TITLE OF INDEX \(index+1) IS -->  \(String(self.mathListController.csvTitleDictionary[index]!)) ")
@@ -249,6 +257,7 @@ struct MathListVM: View {
                                     /// SEARCHING REAL INDEX NUMBER FROM TITLE
                                     /// https://stackoverflow.com/questions/39677330/how-does-string-substring-work-in-swift
                                     ///
+                                    /// ここで、読み込んでいたCSVデータから該当する教材を呼び出す
                                     let title = String(self.mathListController.csvTitleDictionary[index]!)
                                     let convertedIndexStr = title.prefix(5)    // 1, 11,  2000 ...
 
@@ -256,6 +265,7 @@ struct MathListVM: View {
                                     
                                     
                                     print( "SEARCHED INDEX NUMBER OF SUBJECT IS  -->  \(searchedIndexNumber)")
+                                    self.subjectNumber = searchedIndexNumber - 1
                                     
                                     
                                     /// APPLYING FROM LIST CONTROLLER TO CONTENT CONTROLLER
@@ -325,7 +335,10 @@ struct MathListVM: View {
         
         
         if self.isEntered {
-            MathContentVM( imgUrls: self.$fileUrlList, isEntered: self.$isEntered )
+            //MathContentVM( subNum: self.$subjectNumber,imgUrls: self.$fileUrlList, isEntered: self.$isEntered )
+
+            MathContentVM( subNum: self.$subjectNumber, isEntered: self.$isEntered )
+            
         }
         
         

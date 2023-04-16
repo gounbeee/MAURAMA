@@ -19,7 +19,7 @@ import Foundation
 ///
 class MathListController: NSObject, ObservableObject {
     
-    @Published var currentImagesName : [String] = [""]          // INITIALIZED
+//    @Published var currentImagesName : [String] = [""]          // INITIALIZED
                                                                 // +  Published -> THIS IS Published SO THIS PROPERTY CAN BE A TRIGGER
                                                                 //                 FOR RE-EASTABLISHING BELOW PROPERTIES !!
     var pgCSVName : String = ""                                 // INITIALIZED
