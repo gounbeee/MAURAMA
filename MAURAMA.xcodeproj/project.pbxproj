@@ -13,6 +13,7 @@
 		5859760E29974594009B12E4 /* MathContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859760D29974594009B12E4 /* MathContentController.swift */; };
 		585976102997D9B3009B12E4 /* MainIntroVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859760F2997D9B3009B12E4 /* MainIntroVM.swift */; };
 		586ED4BD29963277002CACA5 /* MathListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586ED4BC29963277002CACA5 /* MathListVM.swift */; };
+		587D8DA729ED901800D67AFF /* MEMO_MAURAMA_PROJECT.txt in Resources */ = {isa = PBXBuildFile; fileRef = 587D8DA629ED901800D67AFF /* MEMO_MAURAMA_PROJECT.txt */; };
 		589B92EA297991E7006CB2DD /* MAURAMAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589B92E9297991E7006CB2DD /* MAURAMAApp.swift */; };
 		589B92EE297991EA006CB2DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589B92ED297991EA006CB2DD /* Assets.xcassets */; };
 		589B92F1297991EA006CB2DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589B92F0297991EA006CB2DD /* Preview Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		5859760D29974594009B12E4 /* MathContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathContentController.swift; sourceTree = "<group>"; };
 		5859760F2997D9B3009B12E4 /* MainIntroVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIntroVM.swift; sourceTree = "<group>"; };
 		586ED4BC29963277002CACA5 /* MathListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathListVM.swift; sourceTree = "<group>"; };
+		587D8DA629ED901800D67AFF /* MEMO_MAURAMA_PROJECT.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MEMO_MAURAMA_PROJECT.txt; sourceTree = "<group>"; };
 		589B92E6297991E7006CB2DD /* MAURAMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAURAMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		589B92E9297991E7006CB2DD /* MAURAMAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAURAMAApp.swift; sourceTree = "<group>"; };
 		589B92ED297991EA006CB2DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				5859760D29974594009B12E4 /* MathContentController.swift */,
 				5859760F2997D9B3009B12E4 /* MainIntroVM.swift */,
 				5804640129EBBEC000AAC681 /* MEMO_AUDIO.txt */,
+				587D8DA629ED901800D67AFF /* MEMO_MAURAMA_PROJECT.txt */,
 			);
 			path = MAURAMA;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5804640229EBBEC000AAC681 /* MEMO_AUDIO.txt in Resources */,
+				587D8DA729ED901800D67AFF /* MEMO_MAURAMA_PROJECT.txt in Resources */,
 				589B92F1297991EA006CB2DD /* Preview Assets.xcassets in Resources */,
 				589B92EE297991EA006CB2DD /* Assets.xcassets in Resources */,
 			);
@@ -340,6 +344,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,6 +379,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

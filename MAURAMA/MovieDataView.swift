@@ -10,11 +10,14 @@ import AVFoundation
 import VideoPlayer
 
 
-
+// MOVIE教材を表示させるVIEWMODEL
 struct MovieDataView: View {
-    
+        
+    // 教材のインデックス番号
     @Binding var subNum : Int
     
+    // VideoPlayerは、内部でGSPlayerを使用している。
+    // 関連して、再生の状態を管理するための情報。
     
     @State private var play: Bool = true
     @State private var time: CMTime = .zero
@@ -35,7 +38,7 @@ struct MovieDataView: View {
             
             Spacer()
             
-            
+            // 動画教材
             VideoPlayer(url: URL(string: subNumStr)!, play: $play, time: $time)
                 .autoReplay(autoReplay)
                 .mute(mute)
@@ -54,6 +57,21 @@ struct MovieDataView: View {
                     case .error(let error):
                         self.stateText = "Error: \(error)"
                     }
+                }
+                .onTapGesture { location in
+                    // 動画の上をタップすると、その箇所の座標が得られる。
+                    // また、その時の動画の再生時刻を得る。
+                    // これを持って、とある時刻に特定の場所をクリックした時を指し示すことができる。
+                    // これで、各教材から次の教材に付加的な知識を表示したり、遷移することができる。
+                    
+                    
+                    print("TAPPED AT \(location)")
+                    let crntTm : Float64 = CMTimeGetSeconds(time)
+                    
+                    print("AND CURRENT TIME IS \(crntTm)")
+                    
+                    
+                    
                 }
                 .aspectRatio(1.78, contentMode: .fit)
                 .cornerRadius(16)
@@ -109,10 +127,7 @@ struct MovieDataView: View {
         }
         .onDisappear { self.play = false }
         
-        
-        
-        
-        
+                
     }
     
     
@@ -121,6 +136,7 @@ struct MovieDataView: View {
         let s = Int(time.seconds.truncatingRemainder(dividingBy: 60))
         return String(format: "%d:%02d", arguments: [m, s])
     }
+    
     
     func getTotalDurationString() -> String {
         let m = Int(totalDuration / 60)
